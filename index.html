@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<!-- Gallery -->
+	<main id="js-gallery" role="main" class="gallery">
+
+		<section class="gallery-body">
+
+			<div id="js-poster" class="main-gallery-poster poster">
+				<div class="poster-content">
+
+				<p class="heartbeat">98</p>
+
+				<header class="poster-header">
+					<div class="poster-header-col">
+
+						
+						<div class="poster-header-title popup">
+							HEART BEAT
+						</div>
+						<div class="poster-header-date">SINCE 1995</div>
+<!-- 							<button onclick="myFunction()">Try it</button> -->
+						<p id="demo"></p>
+<!-- 							<ul class="poster-header-spacer">
+							<li>dont worry</li>
+							<li>be happy</li>
+							<li>!!!</li>
+						</ul> -->
+					</div>
+
+
+					<!-- <div class="poster-header-col">
+						<ul>
+							<li>balabala</li>
+							<li>insane</li>
+							<li>ill be okay</li>
+						</ul>
+						<ul class="poster-header-spacer">
+							<li>hehehehe </li>
+							<li>too many homework</li>
+						</ul>
+					</div> -->
+
+
+				</header>
+
+
+
+					<section class="poster-body">
+						<div class="bar bar-black"></div>
+						<div class="bar bar-red"></div>
+						<div class="bar bar-middle bar-green"></div>
+						<div class="bar bar-black"></div>
+						<div class="bar bar-middle bar-red"></div>
+						<div class="bar bar-bottom bar-green"></div>
+						<div class="bar bar-black"></div>
+						<div class="bar bar-red"></div>
+						<div class="bar bar-middle bar-green"></div>
+						<div class="bar bar-black"></div>
+					</section>
+
+<script>
+	const heartbeat = document.querySelector('.heartbeat');
+	const hoverText = document.querySelector('.poster-header-title');
+
+	hoverText.addEventListener('mouseenter', function() {
+		heartbeat.classList.add('revealed');
+		console.log('revealing');
+	});
+	hoverText.addEventListener('mouseleave', function() {
+		heartbeat.classList.remove('revealed')
+		console.log('hiding');
+	});
+
+	setInterval(function(){
+		let randomNumber = Math.floor(Math.random() * (110 - 60) + 60);
+		heartbeat.innerHTML = randomNumber;
+	}, 2000);
+
+
+
+// function myFunction() {
+//   var x = Math.floor((Math.random() * 10) + 1);
+//   document.getElementById("demo").innerHTML = x;
+// }
+</script>
+
+
+
+				</div>
+				<!-- .poster__content -->
+			</div>
+			<!-- .poster -->
+
+		</section>
+		<!-- .gallery__body -->
+
+	</main>
+	<!-- .gallery -->
+	<!-- Gallery -->
+</body>
+</html>
